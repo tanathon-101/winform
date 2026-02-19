@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFormApp.MainPage"
+             Title="My Form">
+
+    <VerticalStackLayout Padding="30" Spacing="15"
+                         VerticalOptions="Center">
+
+        <Label Text="กรอกข้อมูล"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <!-- Text 1 -->
+        <Label Text="ชื่อ"/>
+        <Entry x:Name="nameEntry"
+               Placeholder="กรอกชื่อของคุณ"
+               ClearButtonVisibility="WhileEditing"/>
+
+        <!-- Text 2 -->
+        <Label Text="อีเมล"/>
+        <Entry x:Name="emailEntry"
+               Placeholder="กรอกอีเมลของคุณ"
+               Keyboard="Email"
+               ClearButtonVisibility="WhileEditing"/>
+
+        <!-- Submit Button -->
+        <Button Text="Submit"
+                Clicked="OnSubmitClicked"
+                Margin="0,10,0,0"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                CornerRadius="8"/>
+
+        <!-- แสดงผล -->
+        <Label x:Name="resultLabel"
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="#512BD4"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
